@@ -5,7 +5,9 @@ const portfolioData = {
         contact: {
             email: "lucianoveras.dev@gmail.com",
             phone: "3512594009",
-            location: "Córdoba, Argentina"
+            location: "Córdoba, Argentina",
+            linkedin: "https://www.linkedin.com/in/luciano-veras",
+            github: "https://github.com/Luciano-Veras"
         },
         headline: "Gestión integral de empresas",
         about: "Cuento con una sólida trayectoria de 10 años en administración de empresas, especializándome en la gestión integral de operaciones administrativas y financieras a través de sistemas ERP. Mi gestón abarca la dirección del ciclo completo de compras, facturación de ventas. Poseo amplia experiencia en el manejo de cuentas corrientes, coordinando eficientemente el pago a proveedores y las cobranzas a clientes. Asimismo, realizo la gestión de recursos humanos mediante el sistema biométrico CrossChex Cloud y participo de manera activa en la estructuración de los costos operativos de la empresa.",

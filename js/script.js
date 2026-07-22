@@ -23,8 +23,27 @@ function loadProfileData() {
     const p = portfolioData.profile;
     document.getElementById('hero-name').textContent = p.name;
     document.getElementById('hero-headline').textContent = p.headline;
-    document.getElementById('contact-email').textContent = p.contact.email;
-    document.getElementById('contact-phone').textContent = p.contact.phone;
+    
+    const emailEl = document.getElementById('contact-email');
+    emailEl.textContent = p.contact.email;
+    emailEl.href = `mailto:${p.contact.email}`;
+
+    const phoneEl = document.getElementById('contact-phone');
+    phoneEl.textContent = p.contact.phone;
+    // Remove non-digit characters for WhatsApp link
+    const cleanPhone = p.contact.phone.replace(/\D/g, '');
+    phoneEl.href = `https://wa.me/${cleanPhone}`;
+
+    if (p.contact.linkedin) {
+        document.getElementById('contact-linkedin-container').style.display = 'flex';
+        document.getElementById('contact-linkedin').href = p.contact.linkedin;
+    }
+    
+    if (p.contact.github) {
+        document.getElementById('contact-github-container').style.display = 'flex';
+        document.getElementById('contact-github').href = p.contact.github;
+    }
+
     document.getElementById('contact-location').textContent = p.contact.location;
     
     document.getElementById('about-text').innerHTML = p.about.replace(/\n/g, '<br>');
