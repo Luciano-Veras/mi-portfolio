@@ -55,14 +55,13 @@ const portfolioData = {
         { name: "FullStack D", image: "images/certificados/FullStackD.jpg" }
     ],
     projects: [
-        // Para añadir un proyecto, descomenta las líneas de abajo y completa la información.
-        // {
-        //     title: "Dashboard de Análisis Financiero",
-        //     description: "Aplicación interactiva que consolida datos del ERP para mostrar indicadores clave en tiempo real.",
-        //     techStack: ["React", "Power BI", "CSS"],
-        //     link: "https://ejemplo.com",
-        //     repo: "https://github.com/lucianoveras/ejemplo",
-        //     image: "https://via.placeholder.com/600x400"
-        // }
+        {
+            title: "Erp Compras",
+            description: "Prototipo ERP enfocado en la gestión de proveedores, compras de materias primas, inventarios y trazabilidad de materias primas.",
+            techStack: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
+            link: "https://luciano-veras.github.io/erp-compras/",
+            repo: "https://github.com/Luciano-Veras/erp-compras",
+            image: "images/erp-compras.png"
+        }
     ]
 };
