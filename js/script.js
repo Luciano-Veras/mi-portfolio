@@ -50,13 +50,6 @@ function loadProfileData() {
     document.getElementById('about-dev').innerHTML = p.development.replace(/\n/g, '<br>');
     document.getElementById('about-mission').innerHTML = p.mission.replace(/\n/g, '<br>');
 
-    // Poblar PDF
-    document.getElementById('pdf-name').textContent = p.name;
-    document.getElementById('pdf-role').textContent = p.headline;
-    document.getElementById('pdf-email').textContent = p.contact.email;
-    document.getElementById('pdf-phone').textContent = p.contact.phone;
-    document.getElementById('pdf-location').textContent = p.contact.location;
-    document.getElementById('pdf-about').textContent = p.about + " " + p.mission;
 }
 
 function loadExperienceData() {
@@ -80,15 +73,6 @@ function loadExperienceData() {
         `;
         container.insertAdjacentHTML('beforeend', html);
         
-        // Poblar Experiencia PDF
-        const pdfHtml = `
-            <div class="pdf-exp-item">
-                <h4>${job.role} - ${job.company}</h4>
-                <div class="pdf-date">${job.dates}</div>
-                <ul>${achievementsHtml}</ul>
-            </div>
-        `;
-        document.getElementById('pdf-experience').insertAdjacentHTML('beforeend', pdfHtml);
     });
 }
 
@@ -109,13 +93,6 @@ function loadSkillsData() {
     // Educación formal
     document.getElementById('education-text').innerHTML = portfolioData.education.join('<br>');
 
-    // Poblar Skills PDF
-    const pdfSkillsContainer = document.getElementById('pdf-skills');
-    mgmt.forEach(skill => pdfSkillsContainer.insertAdjacentHTML('beforeend', `<span class="pdf-skill-tag">${skill}</span>`));
-    dev.forEach(skill => pdfSkillsContainer.insertAdjacentHTML('beforeend', `<span class="pdf-skill-tag">${skill}</span>`));
-    
-    // Poblar Educación PDF
-    document.getElementById('pdf-education').innerHTML = portfolioData.education.join('<br><br>');
 }
 
 function loadCertificatesData() {
@@ -228,25 +205,8 @@ window.closeModal = function() {
     document.body.style.overflow = 'auto'; // Reanudar el scroll
 }
 
-// Lógica para descargar PDF
-window.downloadPDF = function() {
-    // Usamos html2pdf para generar un archivo estético a partir de nuestra plantilla
-    const element = document.getElementById('cv-export-template');
-    
-    // Configuraciones de alta calidad
-    const opt = {
-        margin:       0,
-        filename:     'CV_Luciano_Veras.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-    };
-
-    html2pdf().set(opt).from(element).save();
-}
-
-// Lógica para descargar Word
-window.downloadWord = function() {
+// Lógica para descargar CV (Formato minimalista/Word)
+window.downloadCV = function() {
     // Clonamos el cuerpo principal
     const clone = document.createElement('div');
     

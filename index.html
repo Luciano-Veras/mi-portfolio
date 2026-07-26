@@ -15,8 +15,7 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- html2pdf para descargas estéticas -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- html2pdf removed for better efficiency -->
 </head>
 <body>
 
@@ -57,13 +56,10 @@
                         <span class="contact-item" id="contact-github-container" style="display: none;"><i data-lucide="github"></i> <a id="contact-github" href="" target="_blank">GitHub</a></span>
                         <span class="contact-item"><i data-lucide="map-pin"></i> <span id="contact-location"></span></span>
                     </div>
-                    <!-- Download CV Buttons -->
+                    <!-- Download CV Button -->
                     <div class="download-buttons">
-                        <button onclick="downloadPDF()" class="btn-download btn-pdf">
-                            <i data-lucide="file-text"></i> Descargar PDF
-                        </button>
-                        <button onclick="downloadWord()" class="btn-download btn-word">
-                            <i data-lucide="file-word"></i> Descargar Word
+                        <button onclick="downloadCV()" class="btn-download">
+                            <i data-lucide="download"></i> Descargar CV
                         </button>
                     </div>
                 </div>
@@ -148,42 +144,6 @@
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
 
-    <!-- Plantilla Oculta para PDF Estético -->
-    <div id="pdf-wrapper" style="position: absolute; left: -9999px; top: 0;">
-        <div id="cv-export-template" class="cv-pdf-layout">
-            <div class="cv-header">
-                <h1 id="pdf-name"></h1>
-                <h2 id="pdf-role"></h2>
-            </div>
-            <div class="cv-body">
-                <div class="cv-sidebar">
-                    <div class="cv-section">
-                        <h3>Contacto</h3>
-                        <p id="pdf-email"></p>
-                        <p id="pdf-phone"></p>
-                        <p id="pdf-location"></p>
-                    </div>
-                    <div class="cv-section">
-                        <h3>Educación Formal</h3>
-                        <div id="pdf-education"></div>
-                    </div>
-                    <div class="cv-section">
-                        <h3>Stack Tecnológico</h3>
-                        <div id="pdf-skills"></div>
-                    </div>
-                </div>
-                <div class="cv-main">
-                    <div class="cv-section">
-                        <h3>Perfil Profesional</h3>
-                        <p id="pdf-about"></p>
-                    </div>
-                    <div class="cv-section">
-                        <h3>Experiencia Laboral</h3>
-                        <div id="pdf-experience"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Plantilla Oculta para PDF Estético Removida -->
 </body>
 </html>
