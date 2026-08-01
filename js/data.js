@@ -62,6 +62,14 @@ const portfolioData = {
             link: "https://luciano-veras.github.io/erp-compras/",
             repo: "https://github.com/Luciano-Veras/erp-compras",
             image: "images/erp-compras.png"
+        },
+        {
+            title: "Catálogos Logísticos B2B",
+            description: "Herramienta web ágil y minimalista, diseñada para conectar una base de datos local y visualizar su catálogo completo al instante, sin complicaciones",
+            techStack: ["JavaScript", "Tailwind CSS", "FontAwesome", "SQLite WASM", "Google AI Studio", "Google Antigravity 2.0"],
+            link: "https://luciano-veras.github.io/datos-logisticos/",
+            repo: "https://github.com/Luciano-Veras/datos-logisticos",
+            image: "images/catalogos-logisticos.png"
         }
     ]
 };
