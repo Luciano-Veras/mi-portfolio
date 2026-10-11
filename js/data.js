@@ -73,6 +73,14 @@ const portfolioData = {
             link: "https://luciano-veras.github.io/datos-logisticos/",
             repo: "https://github.com/Luciano-Veras/datos-logisticos",
             image: "images/catalogos-logisticos.png"
+        },
+        {
+            title: "Gestor de Inventario & Análisis de Abastecimiento",
+            description: "Dashboard analítico procesa reportes ERP (.xlsx / .csv) masivos en tiempo real. Clasifica automáticamente el inventario: previene roturas de stock críticas, detecta pedidos sugeridos y audita órdenes de compra en tránsito para evitar duplicaciones con proveedores.",
+            techStack: ["React 19", "TypeScript", "Tailwind CSS v4", "Recharts", "SheetJS (XLSX)", "Lucide Icons", "Vite 6", "Google Antigravity 2.0"],
+            link: "https://luciano-veras.github.io/GestorInventario/",
+            repo: "https://github.com/Luciano-Veras/GestorInventario",
+            image: "images/gestor-inventario.png"
         }
     ]
 };
